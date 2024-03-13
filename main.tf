@@ -85,7 +85,7 @@ resource "azurerm_linux_virtual_machine" "test" {
   availability_set_id   = azurerm_availability_set.avset.id
   resource_group_name   = azurerm_resource_group.rg.name
   network_interface_ids = [azurerm_network_interface.test[count.index].id]
-  size                  = "Standard_BS1_v2"
+  size                  = "Standard_B1s"
 
   # Uncomment this line to delete the OS disk automatically when deleting the VM
   # delete_os_disk_on_termination = true
